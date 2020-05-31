@@ -131,4 +131,4 @@ const numArr = [10, 7, 44, 32];//! 7 будет в конце, т.к. 7 в ле�
 numArr.sort((prev, next) => prev - next);
 //! отсортируем по возрасту
 users.sort((prevUser, nextUser) => prevUser.age - nextUser.age);
-console.log(users);
+console.log(users); 
