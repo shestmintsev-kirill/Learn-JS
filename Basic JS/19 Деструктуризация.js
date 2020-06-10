@@ -11,7 +11,7 @@ const user = {
 // const firstName = user.firstName;
 // const lastName = user.lastName;
 
-const { firstName: name, lastName, age: years = 30 } = user; //! из обьекта user вытащили свойства, так же можно задавать для свойств переменные, например: ((св-во firstName):(переменная name)), (age: years). Если св-во не присвоено то можно его задать
+const { firstName: name, lastName, age: years = 30, } = user; //! из обьекта user вытащили свойства, так же можно задавать для свойств переменные, например: ((св-во firstName):(переменная name)), (age: years). Если св-во не присвоено то можно его задать
 
 //! Достаю вложенные обьекты
 const {
@@ -29,8 +29,10 @@ console.log(name1, otherNames);
 const nestedArr = ["hello world", ["key", "value"]];
 const [, [key, value]] = nestedArr; //! Достал вложенный массив
 // console.log(key, value);
+
 const [...newNames] = names; //! сделал копию массива имен (оператор rest)
 const newNames = [...names]; //! или (оператор spread)
+
 console.log(...newNames); //! если применить на вывод ... то будет выведен "массив не как массив"
 
 const colorNames = ["some value", ...colors, ...names]; //!  добавил в начало '' и сделал конкатеницию массивов
