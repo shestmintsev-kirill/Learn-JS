@@ -104,7 +104,7 @@ const tasks = [
       "--input-focus-box-shadow": "0 0 0 0.2rem rgba(141, 143, 146, 0.25)",
     },
   };
-  let lastSelectedTheme = 'default'; //переменна для задания темы при отмене
+  let lastSelectedTheme = localStorage.getItem('app_theme') || 'default';//переменная последней выбранной темы(записанной в localStorage) для реализации установки последней выбранной темы
 
   //* Elements UI
   const listContainer = document.querySelector(
@@ -117,6 +117,7 @@ const tasks = [
   const themeSelect = document.getElementById("themeSelect"); //ищу select по id-themeSelect
 
   //*Events
+  setTheme(lastSelectedTheme);// вызов ф-ии задания темы, передаю(последнюю вызванную тему записанную  в localStorage)
   renderAllTasks(ObjofTasks); // вызов вывода задач на страницу
   form.addEventListener("submit", onFormSubmitHandler); //создал событие для формы (событие, обработчик)
   listContainer.addEventListener("click", onDeleteHandler); // создал событие для 'delete Task'(обработчик события на весь список, в котором генерируется задача)
@@ -241,6 +242,7 @@ const tasks = [
     }; //если false то ничего не делатся
     setTheme(selectedTheme); //вызов ф-ии установки темы
     lastSelectedTheme = selectedTheme; //если true то тема(lastSelectedTheme) меняется на последнюю выюранную(selectedTheme)
+    localStorage.setItem('app_theme', selectedTheme); //добавил изменение темы в св-во 'app_theme' в localStorage(Браузер)
   }
 
   function setTheme(name) {
