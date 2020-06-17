@@ -123,6 +123,7 @@ const tasks = [
   listContainer.addEventListener("click", onDeleteHandler); // создал событие для 'delete Task'(обработчик события на весь список, в котором генерируется задача)
   themeSelect.addEventListener("change", onThemeSelectHandler); // событие на select
 
+  //*вывод задачи на страницу
   function renderAllTasks(tasksList) {
     // вывод задач на страницу
     if (!tasksList) {
@@ -138,7 +139,7 @@ const tasks = [
     });
     listContainer.appendChild(fragment);
   }
-
+//* генерация разметки
   function listItemTamplate({ _id, title, body } = {}) {
     //ф-ия получает на вход 1 задачу, деструктурирую, и внутри этой ф-ии генерирую разметку
     const li = document.createElement("li");
@@ -171,7 +172,7 @@ const tasks = [
     //таким образоя я сформировал разметку для каждой задачи, что бы вызвать эту ф-ии я должен вернуть 'li'
     return li;
   }
-
+  //* создаю задачу через форму
   function onFormSubmitHandler(e) {
     //создал обработчик события submit
     e.preventDefault(); // что бы не перезагружать страниу
@@ -204,6 +205,7 @@ const tasks = [
 
     return { ...newTask }; // для будущего использования возвращаю копию этой новой задачи(копию этой новой задачи получаю в переменной 'task')
   }
+  //*удаление задачи
   //ф-ия буду вызывать из обработчика!
   function deleteTask(id) {
     //создал ф-ию которая принимает id задачи, которую нужно удалить
@@ -230,7 +232,8 @@ const tasks = [
       deleteTaskFromHtml(confirmed, parent); //вызов ф-ии удаления
     }
   }
-
+  
+  //* выбор темы
   function onThemeSelectHandler(e) {
     //обработчик события изменения select
     const selectedTheme = themeSelect.value; //в переменной будет храниться выбор темы
