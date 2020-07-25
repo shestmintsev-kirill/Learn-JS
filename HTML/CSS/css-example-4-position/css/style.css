@@ -1,0 +1,37 @@
+/* Позиционирование */
+/* ! 3 осн типа relative-относительное absolute-абсолютное fixed-фиксированное позиционирование, задается через position */
+.block {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* relative положение элемента относительно его расположения */
+.pos-relative {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+/* absolute элемент позиционируется относительно окна браузера
+при абсолютной позиции ширина элемента равна ширине контента или ширине заданной*/
+.pos-absolute {
+  position: absolute;
+}
+
+.absolute-container {
+  width: 500px;
+  height: 500px;
+  padding: 50px;
+  background-color: orange;
+}
+/* что бы позиционировать элемент относительно родителя, родителю тоже нужно задать позицию, обычно это position: relative */
+
+/* !position: fixed это фиксированное положение элемента, при этом позиционировании элемент всегда позиционируеться относительно окна браузера        то еть при скролле элемент всегда в определенном положении*/
+.pos-fixed {
+  position: fixed;
+}
+

@@ -1,0 +1,32 @@
+/* .list li:last-child a {
+    color: red;
+}
+
+.list li:first-child a {
+    color: orange;
+} */
+
+/* .list li:nth-child(4) a {
+    color: blueviolet;
+} */
+/* !Псевдокласс hover будет появляться при наводе на элемент */
+/* .list a:hover {
+    color: brown;
+} */
+/* !дает возможность исключить стили из селектора */
+/* .list li:not(.not-exmpl) a {
+    color: orange;
+} */
+/* ! это св-во уберет точки перед каждым эл. списка */
+.list {
+    list-style: none;
+}
+/* ! Псевдоэлемент before и after могут выводить контент после и перед элементом */
+.list li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    margin-right: 10px;
+}

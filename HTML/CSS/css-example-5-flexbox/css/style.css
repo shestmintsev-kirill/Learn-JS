@@ -1,0 +1,51 @@
+/* !Базово главная ось считается горизонтальной */
+/* flex-direction: row-reverse;- меняет на справо на лево, и меняеться порядок
+flex-direction: column;- блочная система 
+justify-content: flex-start - на место по основной(горизонтальной оси
+justify-content: flex-end - все элементы станут справа, при этом порядок останется такой же
+justify-content: center - по центру
+justify-content: space-around; - распределяет эл. так, тчо бы между ними были равные отступы
+justify-content: space-between; - только 1-ый и последний прижимаются по краям
+justify-content: space-evenly;-одинаковые отступы со всех сторон*/
+/* !flex-wrap: wrap; при этом св-ве эл. при сжатии будут смещаться  */
+/* align-items: center- выравнивание по вертикальной оси */
+
+
+.flex-container {
+    padding: 20px;
+    background-color: lightgray;
+    display: flex; /*!при задании на контейнер элементы выстраиваются в ряд*/
+    /* justify-content: space-evenly;
+    flex-wrap: wrap;  */
+    flex-wrap: wrap
+}
+
+.flex-el {
+    width: 100px;
+    height: 100px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 24px;
+    /* flex-grow: 1; */
+}
+
+.bg-blue {
+    background-color: blue;
+    /* order: 1; */
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-green {
+    background-color: greenyellow;
+}
+
+.bg-violet {
+    background-color: violet;
+}
+
+.bg-pink {
+    background-color: pink;
+}
