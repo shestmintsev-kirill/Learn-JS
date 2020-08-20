@@ -1,0 +1,167 @@
+/*! Reset start   отключил стндарты на странице */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*что бы ширина эл. расчитывалась с учетом padding и тд.*/
+}
+
+body {
+  color: #212121;
+  font: 400 14px/1 "Roboto", sans-serif; /*! 14 это размер /1 это высота строки*/
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+.col-4 {
+  width: 33.333%;
+  padding: 0 15px;
+}
+/* Reset end */
+
+/* Default classes start */
+.display-flex {
+  display: flex;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.text-center {
+  text-align: center;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.pos-fixed {
+  position: fixed;
+}
+.text-right {
+  text-align: right;
+}
+/* Default classes end */
+
+.section-title {
+  font-weight: 900;
+  margin-bottom: 75px;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 1170px; /* максимальная ширина*/
+  margin: auto; /* дает возможность отцентровать эл. по середине*/
+  padding: 0 15px; /* для отступов по краям на 15px обычно для разных экраном */
+}
+
+.standart-section {
+  padding: 80px 0;
+}
+
+#header {
+  padding: 20px 0; /* отступ для верх/низ, отступ для ><, если одна цифра, то для всех сторон*/
+  border-bottom: 2px solid #00e9ba; /* подчеркивание хэдера*/
+  background-color: #ffffff; /* что бы хэдер был не прозрачным*/
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); /* тень, принимает 1(сдвиг по оси Х).2(сдвиг по оси Y) 3(размах\размытие тени) 4(цвет)	*/
+  position: fixed;
+  width: 100%;
+  top: 0;
+	left: 0;
+	z-index: 99;
+}
+.row {
+  margin: 0 -15px;
+}
+.btn {
+  display: inline-block; /*делаем строчно-блочный элемент*/
+  padding: 16px 60px;
+  font: 400 14px/1 "Roboto", sans-serif;
+  border-radius: 50px; /*закругляю*/
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: #212121;
+}
+.btn.btn-default {
+  background-color: #fffd00;
+  border-color: #fffd00;
+  box-shadow: 0 8px 15px rgba(255, 253, 0, 0.5);
+}
+.btn.btn-default:hover {
+  background-color: #fff;
+}
+#main {
+  padding-top: 87px;
+}
+
+.header-nav {
+  font-size: 16px; /* стиль для текста в навБаре*/
+  font-weight: 700;
+}
+
+.header-nav a {
+  text-transform: capitalize; /*принудиельно каждое слово с большой буквы
+}
+
+.header-nav a + a { /* а + а значит что след а кроме первого получит этот отступ с лева*/
+  margin-left: 30px; /* отступ между ссылками*/
+}
+
+.header-nav a:hover {
+  color: #00e9ba; /*задал цвет при навижении мышкой*/
+}
+
+.course-item {
+  background-color: #ffffff; /*фон*/
+  box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin-bottom: 30px;
+  position: relative; /*зафиксировал что бы разместить course-date*/
+}
+.course-item .cours-img {
+  display: block; /*сделал блочную система, т.к. ссылка это строчный элемент*/
+  margin-bottom: 20px;
+}
+.course-item .cours-title {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.course-price {
+  font-size: 30px;
+  font-weight: 700;
+  color: #00e9ba;
+}
+.course-item .course-date {
+  width: 100px;
+  height: 100px;
+  background-color: #fdd835;
+  font-size: 16px;
+  border-radius: 50%;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  top: -50px;
+}
+.about-us-text {
+  font-size: 18px;
+  line-height: 1.3;
+  min-width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+}
