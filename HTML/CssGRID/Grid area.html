@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        background: lightblue;
+      }
+      .item {
+        background: lightsalmon;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-gap: 10px; /*одинаковые отступы для всей сетки */
+        grid-template-columns: 1fr 1fr 1fr; /*распределил на 2 колонки по 1fr*/
+        grid-template-rows: 50px 200px 70px; /*разбил строки по размерам*/
+        grid-template-areas: /*я только одним areas могу определить расположение*/
+          'header header header'
+          'sidebar content content'
+          'footer footer footer'; /*задал области по ствей таблице(как я разбил так и назвал)*/
+      }
+      .header {
+        grid-area: header; /*задал для класса, что его область это весь header*/
+
+        /* grid-row: header-start / sidebar-end; */   /*так я могу вручную задать расположение только по названиям в areas*/
+      }
+      .sidebar {
+        grid-area: sidebar;
+      }
+      .content {
+        grid-area: content;
+      }
+      .footer {
+        grid-area: footer;
+      }
+    </style>
+
+    <div class="grid-container">
+      <div class="item header">header</div>
+      <div class="item sidebar">sidebar</div>
+      <div class="item content">content</div>
+      <div class="item footer">footer</div>
+    </div>
+  </body>
+</html>
