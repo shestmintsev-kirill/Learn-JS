@@ -62,7 +62,7 @@ function foo(x, y, ...others) {
   console.log(arguments);
   // console.log(Array.prototype.slice.call(arguments));
   const [...args] = arguments; //! получил копию аргументов в виде массива
-  console.log(others); //! в этой переменной будет [5, 6], т.к. они собержаться в others
+  console.log(others); //! в этой переменной будет [5, 6], т.к. они содержаться в others
 }
 foo(1, 2, 5, 6);
 

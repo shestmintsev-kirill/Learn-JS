@@ -27,6 +27,6 @@ console.log(values);
 //! метод Object.entries возвращает массив массивов, где каждым элементом является пара Ключ и Значение объекта, принимает (обьект)
 let entries = Object.entries(obj2);
 console.log(entries);
-//! метод Object.entries обратный Object.entries возвращает объект из массивов Ключ:Значение , принимает ([Ключ: значение])
+//! метод Object.fromEntries обратный Object.entries возвращает объект из массивов Ключ:Значение , принимает ([Ключ: значение])
 let fromEntries = Object.fromEntries([['a', 'value'], ['b', 'b_value']]);
 console.log(fromEntries);
